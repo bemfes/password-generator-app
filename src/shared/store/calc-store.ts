@@ -13,7 +13,10 @@ const initialState: InitialStateTypes  = {
 
 const useCalcStore = create<UseCalcStoreTypes>((set) => ({
     ...initialState,
-
+    changeUpperCase: () => set((state) => ({ ...state, checkedUpperCase: !state.checkedUpperCase })),
+    changeLowerCase: () => set((state) => ({ ...state, checkedLowerCase: !state.checkedLowerCase })),
+    changeNumbers: () => set((state) => ({ ...state, checkedNumbers: !state.checkedNumbers })),
+    changeSymbols: () => set((state) => ({ ...state, checkedSymbols: !state.checkedSymbols })),
 
 }))
 
