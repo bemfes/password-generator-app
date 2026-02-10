@@ -9,6 +9,13 @@
 }
 
 :root {
+  --green-color: #A4FFAF;
+  --grey-color: #24232B;
+  --dark-grey-color: #18171F;
+  --black-color: #100F15;
+  --white-color: white;
+  --orange-color: #FBD36C;
+
   font-family: "Google Sans Code", monospace;
   line-height: 1.5;
   font-weight: 500;
