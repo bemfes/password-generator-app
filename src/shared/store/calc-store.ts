@@ -3,7 +3,7 @@ import { InitialStateTypes, UseCalcStoreTypes } from "./types";
 
 const initialState: InitialStateTypes  = {
     password: null,
-    length: 5,
+    length: '5',
     checkedUpperCase: false,
     checkedLowerCase: false,
     checkedNumbers: false,
@@ -17,6 +17,7 @@ const useCalcStore = create<UseCalcStoreTypes>((set) => ({
     changeLowerCase: () => set((state) => ({ ...state, checkedLowerCase: !state.checkedLowerCase })),
     changeNumbers: () => set((state) => ({ ...state, checkedNumbers: !state.checkedNumbers })),
     changeSymbols: () => set((state) => ({ ...state, checkedSymbols: !state.checkedSymbols })),
+    
 
 }))
 

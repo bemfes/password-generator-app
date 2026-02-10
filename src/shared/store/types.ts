@@ -1,6 +1,6 @@
 export interface InitialStateTypes {
     password: null | string;
-    length: number;
+    length: string;
     checkedUpperCase: boolean;
     checkedLowerCase: boolean;
     checkedNumbers: boolean;
