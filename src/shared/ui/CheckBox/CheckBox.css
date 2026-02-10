@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+.checkbox-container {
+    @apply relative flex flex-row 
+}
+.checkbox-container div {
+    @apply w-4.5 h-4.5 border border-[var(--white-color)] bg-transparent mr-2 relative
+}
+.checkbox-container input {
+    @apply absolute opacity-0 cursor-pointer w-4.5 h-4.5 z-[1]
+}
+.checkbox-container input:checked + div {
+    @apply bg-[var(--green-color)] border-[var(--green-color)]
+}
+.checkbox-container input:checked + div::after {
+    content: '';
+    @apply absolute w-[14px] h-0.5 bg-[var(--dark-grey-color)] block left-[-3px] top-[50%] translate-x-[50%] rotate-[120deg]
+}
+.checkbox-container input:checked + div::before {
+    content: '';
+    @apply absolute w-2 h-0.5 bg-[var(--dark-grey-color)] block  rotate-[218deg] left-[1px] bottom-[3px]
+}
+
