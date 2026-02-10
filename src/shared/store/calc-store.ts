@@ -17,6 +17,7 @@ const useCalcStore = create<UseCalcStoreTypes>((set) => ({
     changeLowerCase: () => set((state) => ({ ...state, checkedLowerCase: !state.checkedLowerCase })),
     changeNumbers: () => set((state) => ({ ...state, checkedNumbers: !state.checkedNumbers })),
     changeSymbols: () => set((state) => ({ ...state, checkedSymbols: !state.checkedSymbols })),
+    changeLength: (value) => set((state) => ({ ...state, length: value }))
     
 
 }))
