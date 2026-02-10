@@ -15,7 +15,7 @@ const Calculator = () => {
             </div>
         </div>
         <div className="calculator-content-box">
-            <RangeInput className="range-input-box" labelText="Character length" id='range'/>
+            <RangeInput value="" min='5' max="20" onChange={() => console.log()} className="range-input-box" labelText="Character length" id='range'/>
             <CheckBox labelText="Include Uppercase Letters" id="uppercase" className="checkbox-container"/>
             <CheckBox labelText="Include Lowercase Letters" id="lowercase" className="checkbox-container"/>
             <CheckBox labelText="Include Numbers" id="numbers" className="checkbox-container"/>
