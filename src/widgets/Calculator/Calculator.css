@@ -7,3 +7,11 @@
 .calculator-content-box {
     @apply bg-[var(--grey-color)] p-6 flex flex-col gap-4
 }
+
+.calculator-password-content {
+    @apply flex flex-row justify-between items-center
+}
+
+.password-placeholder {
+    @apply opacity-50
+}
