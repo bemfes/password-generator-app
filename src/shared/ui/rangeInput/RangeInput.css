@@ -26,11 +26,11 @@
 
 
 .range-input-box input[type=range]::-webkit-slider-runnable-track {
-  @apply w-full h-[5px] bg-[var(--dark-grey-color)] rounded-[2px]
+  @apply w-full h-[5px]  rounded-[2px]
 }
 
 .range-input-box input[type=range]::-moz-range-track {
-  @apply w-full h-[5px] bg-[var(--dark-grey-color)] rounded-[2px]
+  @apply w-full h-[5px]  rounded-[2px]
 } 
 
 .range-input-box input[type=range]:hover::-webkit-slider-thumb {
