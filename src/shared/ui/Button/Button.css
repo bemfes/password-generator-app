@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.button {
+    @apply p-4 flex justify-center items-center cursor-pointer
+}
+
+.green-button {
+    @apply bg-[var(--green-color)] text-[var(--dark-grey-color)] text-lg 
+    hover:bg-[var(--grey-color)] hover:text-[var(--green-color)]
+   border-[var(--green-color)] border transition-all
+}
