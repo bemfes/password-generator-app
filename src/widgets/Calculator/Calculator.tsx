@@ -21,13 +21,15 @@ const Calculator = () => {
 
     const length = useCalcStore(state => state.length)
     const changeLength = useCalcStore(state => state.changeLength)
+
+    const password = useCalcStore(state => state.password)
     
     
 
     return <div className="calculator-box">
         <div className="calculator-content-box">
             <div className="calculator-password-content">
-                <p><span className="password-placeholder">Password...</span></p>
+                <p>{ password ? <p>{password}</p> : <span className="password-placeholder">Password...</span>} </p>
                 <Button className="" onClick={() => console.log()}>
                     <img width={30} height={30} src={CopyIcon}/>
                 </Button>
