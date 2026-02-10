@@ -6,7 +6,7 @@ const RangeInput: FC<RangeInputProps> = ({ labelText, id, className, min, max, v
     return <div className={className}>
         <div>
             <label htmlFor={id}>{labelText}</label>
-            <p>0</p>
+            <p>{value}</p>
         </div>
         <input onChange={onChange} min={min} max={max} value={value} id={id} type="range" />
 
