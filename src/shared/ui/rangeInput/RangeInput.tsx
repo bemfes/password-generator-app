@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { RangeInputProps } from "./types";
+import "./RangeInput.css"
 
 const RangeInput: FC<RangeInputProps> = ({ labelText, id, className }) => {
     return <div className={className}>
