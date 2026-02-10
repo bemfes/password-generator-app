@@ -6,3 +6,10 @@ export interface InitialStateTypes {
     checkedNumbers: boolean;
     checkedSymbols: boolean;
 }
+
+export interface UseCalcStoreTypes extends InitialStateTypes {
+    changeUpperCase: () => void;
+    changeLowerCase: () => void;
+    changeNumbers: () => void;
+    changeSymbols: () => void;
+}
