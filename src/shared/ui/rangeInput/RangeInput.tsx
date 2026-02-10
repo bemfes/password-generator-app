@@ -2,13 +2,13 @@ import { FC } from "react";
 import { RangeInputProps } from "./types";
 import "./RangeInput.css"
 
-const RangeInput: FC<RangeInputProps> = ({ labelText, id, className }) => {
+const RangeInput: FC<RangeInputProps> = ({ labelText, id, className, min, max, value, onChange }) => {
     return <div className={className}>
         <div>
             <label htmlFor={id}>{labelText}</label>
             <p>0</p>
         </div>
-        <input id={id} type="range" />
+        <input onChange={onChange} min={min} max={max} value={value} id={id} type="range" />
 
     </div>
 }
