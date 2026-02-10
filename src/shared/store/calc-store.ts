@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { InitialStateTypes } from "./types";
+import { InitialStateTypes, UseCalcStoreTypes } from "./types";
 
 const initialState: InitialStateTypes  = {
     password: null,
@@ -11,7 +11,7 @@ const initialState: InitialStateTypes  = {
 
 }
 
-const useCalcStore = create((set) => ({
+const useCalcStore = create<UseCalcStoreTypes>((set) => ({
     ...initialState,
 
 
