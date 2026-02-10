@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+.range-input-box div {
+    @apply flex flex-row justify-between mb-2 items-end
+}
+
+.range-input-box p {
+    @apply text-2xl text-[var(--green-color)]
+}
+
+.range-input-box input[type=range] {
+  -webkit-appearance: none; 
+  @apply w-full bg-transparent appearance-none
+  
+}
+ 
+.range-input-box input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+   @apply h-5 w-5 bg-[var(--white-color)] rounded-[50%] cursor-pointer mt-[-7.5px] 
+  
+}
+
+.range-input-box input[type=range]::-moz-range-thumb {
+  @apply h-5 w-5 bg-[var(--white-color)] rounded-[50%] cursor-pointer mt-[-7.5px] 
+}
+
+
+.range-input-box input[type=range]::-webkit-slider-runnable-track {
+  @apply w-full h-[5px] bg-[var(--dark-grey-color)] rounded-[2px]
+}
+
+.range-input-box input[type=range]::-moz-range-track {
+  @apply w-full h-[5px] bg-[var(--dark-grey-color)] rounded-[2px]
+} 
+
+.range-input-box input[type=range]:hover::-webkit-slider-thumb {
+  @apply bg-[var(--dark-grey-color)] border-2 border-[var(--green-color)]
+}
+
+.range-input-box input[type=range]:hover::-moz-range-thumb {
+  @apply bg-[var(--dark-grey-color)] border-2 border-[var(--green-color)]
+}
+
