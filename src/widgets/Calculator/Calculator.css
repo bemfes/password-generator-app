@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.calculator-box {
+    @apply flex flex-col gap-2 w-full
+}
+
+.calculator-content-box {
+    @apply bg-[var(--grey-color)] p-6
+}
