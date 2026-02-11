@@ -13,4 +13,5 @@ export interface UseCalcStoreTypes extends InitialStateTypes {
     changeNumbers: () => void;
     changeSymbols: () => void;
     changeLength: (value: string) => void;
+    setPassword: (value: string) => void;
 }
