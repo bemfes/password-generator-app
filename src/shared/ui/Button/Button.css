@@ -6,8 +6,11 @@
 
 .green-button {
     @apply bg-[var(--green-color)] text-[var(--dark-grey-color)] text-lg 
-    hover:bg-[var(--grey-color)] hover:text-[var(--green-color)]
    border-[var(--green-color)] border transition-all
+}
+
+.green-button:hover:enabled {
+    @apply bg-[var(--grey-color)] text-[var(--green-color)]
 }
 
 .button:disabled {
