@@ -19,7 +19,7 @@
 
 
 .copy-icon {
-    @apply fill-[var(--white-color)] duration-200
+    @apply fill-[var(--white-color)] duration-200 cursor-pointer
 }
 
 .copy-button:hover .copy-icon {
