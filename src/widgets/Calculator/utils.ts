@@ -10,7 +10,8 @@ export function generatePassword(): void {
 
     let password: string = ''
 
-    let symbols: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!№;%:?*()_+=";
+    let symbols: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!№;%:?*()_+=";
+    // let symbols: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!№;%:?*()_+=";
 
     for (let i = 0; i < length; i++) {
         if (!checkedNumbers) {
@@ -34,6 +35,15 @@ export function generatePassword(): void {
         password += random
 
     }
+
+    if (checkedLowerCase && !/[a-z]/g.test(password)) {
+        const min = 97;
+        const max = 122;
+        const smallLetter = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min) 
+        password = smallLetter + password.slice(1)
+    }
+
+    console.log(password);
 
     useCalcStore.getState().setPassword(password)
 
