@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.show-strength-box {
+    @apply flex flex-row justify-between bg-[var(--dark-grey-color)] p-6 items-end max-[460px]:flex-col
+    max-[460px]:items-start
+}
+
+.show-strength-right {
+    @apply flex flex-row gap-3
+}
+
+.show-strength-cols {
+    @apply flex flex-row gap-1.5
+}
+
+.show-strength-col {
+    @apply border border-[var(--white-color)] w-2 h-6
+}
+
+.show-strength-title {
+    @apply opacity-50 max-[460px]:mb-[10px]
+}
+.show-strength-name {
+    @apply text-xl max-[460px]:text-[18px]
+}
+
+.show-strength-cols-1 .show-strength-col:nth-child(-n+1) { 
+  @apply bg-[var(--orange-color)] border-[var(--orange-color)]
+}
+.show-strength-cols-2 .show-strength-col:nth-child(-n+2) { 
+  @apply bg-[var(--orange-color)] border-[var(--orange-color)]
+}
+.show-strength-cols-3 .show-strength-col:nth-child(-n+3) { 
+  @apply bg-[var(--orange-color)] border-[var(--orange-color)]
+}
+.show-strength-cols-4 .show-strength-col:nth-child(-n+4) { 
+  @apply bg-[var(--orange-color)] border-[var(--orange-color)]
+}
