@@ -24,7 +24,7 @@ const Calculator = () => {
 
     const password = useCalcStore(state => state.password)
     
-    
+    const generateBtnAccess = [checkedUpperCase, checkedLowerCase, checkedNumbers, checkedSymbols]
 
     return <div className="calculator-box">
         <div className="calculator-content-box">
@@ -41,7 +41,7 @@ const Calculator = () => {
             <CheckBox checked={checkedLowerCase} onChange={changeLowerCase} labelText="Include Lowercase Letters" id="lowercase" className="checkbox-container"/>
             <CheckBox checked={checkedNumbers} onChange={changeNumbers} labelText="Include Numbers" id="numbers" className="checkbox-container"/>
             <CheckBox checked={checkedSymbols} onChange={changeSymbols} labelText="Include Symbols" id="symbols" className="checkbox-container"/>
-            <Button className="button green-button"  onClick={() => console.log()}>GENERATE</Button>
+            <Button disabled={generateBtnAccess.includes(true)? false : true} className="button green-button"  onClick={() => console.log()}>GENERATE</Button>
         </div>
     </div>
 }
