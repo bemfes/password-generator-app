@@ -9,3 +9,7 @@
     hover:bg-[var(--grey-color)] hover:text-[var(--green-color)]
    border-[var(--green-color)] border transition-all
 }
+
+.button:disabled {
+    @apply opacity-50 cursor-not-allowed
+}
