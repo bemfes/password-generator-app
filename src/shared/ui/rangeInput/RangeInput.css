@@ -41,3 +41,10 @@
   @apply bg-[var(--dark-grey-color)] border-2 border-[var(--green-color)]
 }
 
+.range-input-box label {
+  @apply max-[395px]:text-[12px]
+}
+
+.range-input-box div {
+  @apply max-[395px]:items-center
+}

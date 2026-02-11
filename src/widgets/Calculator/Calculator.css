@@ -15,3 +15,7 @@
 .password-placeholder {
     @apply opacity-50
 }
+
+.calculator-password-content p {
+    @apply max-[395px]:text-[13px]
+}
