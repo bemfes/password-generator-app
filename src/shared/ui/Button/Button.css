@@ -16,3 +16,12 @@
 .button:disabled {
     @apply opacity-50 cursor-not-allowed
 }
+
+
+.copy-icon {
+    @apply fill-[var(--white-color)] duration-200
+}
+
+.copy-button:hover .copy-icon {
+    @apply fill-[var(--green-color)] duration-200
+}
