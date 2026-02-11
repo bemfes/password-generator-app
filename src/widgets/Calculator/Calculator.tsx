@@ -28,6 +28,7 @@ const Calculator = () => {
     const generateBtnAccess = [checkedUpperCase, checkedLowerCase, checkedNumbers, checkedSymbols]
 
     return <div className="calculator-box">
+        <h1>Password Generator</h1>
         <div className="calculator-content-box">
             <div className="calculator-password-content">
                 <p>{ password ? password : <span className="password-placeholder">Password...</span>} </p>
