@@ -53,6 +53,12 @@ export function generatePassword(): void {
         const number = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min) 
         password = number + password.slice(1)
     }
+    if (checkedSymbols && !/[!№;%:?*()_+=]/g.test(password)) {
+        const min = 33;
+        const max = 47;
+        const symbol = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min)
+        password = symbol + password.slice(1)
+    }
 
     console.log(password);
 
