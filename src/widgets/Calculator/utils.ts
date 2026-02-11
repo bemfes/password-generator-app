@@ -1,5 +1,11 @@
 import useCalcStore from "../../shared/store";
 
+export function copyText(text: string): void {
+        if (text) {
+            navigator.clipboard.writeText(text)
+        }
+    }
+
 export function generatePassword(): void {
 
     const checkedUpperCase = useCalcStore.getState().checkedUpperCase
