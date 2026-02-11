@@ -5,6 +5,7 @@ import "./Calculator.css"
 import useCalcStore from "../../shared/store"
 import { copyText, generatePassword } from "./utils"
 import IconCopy from '../../shared/assets/icon-copy.svg?react'
+import ShowStrength from "../../features/show-difficulty/showStrength"
 
 const Calculator = () => {
 
@@ -43,6 +44,7 @@ const Calculator = () => {
             <CheckBox checked={checkedLowerCase} onChange={changeLowerCase} labelText="Include Lowercase Letters" id="lowercase" className="checkbox-container"/>
             <CheckBox checked={checkedNumbers} onChange={changeNumbers} labelText="Include Numbers" id="numbers" className="checkbox-container"/>
             <CheckBox checked={checkedSymbols} onChange={changeSymbols} labelText="Include Symbols" id="symbols" className="checkbox-container"/>
+            <ShowStrength/>
             <Button disabled={generateBtnAccess.includes(true)? false : true} className="button green-button"  onClick={generatePassword}>GENERATE</Button>
         </div>
     </div>
