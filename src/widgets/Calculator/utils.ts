@@ -47,6 +47,12 @@ export function generatePassword(): void {
         const bigLetter = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min) 
         password = bigLetter + password.slice(1)
     }
+    if (checkedNumbers && !/[0-9]/g.test(password)) {
+        const min = 48;
+        const max = 57;
+        const number = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min) 
+        password = number + password.slice(1)
+    }
 
     console.log(password);
 
