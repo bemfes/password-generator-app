@@ -2,9 +2,9 @@ import Button from "../../shared/ui/Button"
 import CheckBox from "../../shared/ui/CheckBox"
 import RangeInput from "../../shared/ui/rangeInput"
 import "./Calculator.css"
-import CopyIcon from '../../shared/assets/copy-icon.png'
 import useCalcStore from "../../shared/store"
 import { copyText, generatePassword } from "./utils"
+import IconCopy from '../../shared/assets/icon-copy.svg?react'
 
 const Calculator = () => {
 
@@ -31,8 +31,8 @@ const Calculator = () => {
         <div className="calculator-content-box">
             <div className="calculator-password-content">
                 <p>{ password ? password : <span className="password-placeholder">Password...</span>} </p>
-                <Button className="" onClick={() => copyText(password!)}>
-                    <img width={30} height={30} src={CopyIcon}/>
+                <Button className="copy-button" onClick={() => copyText(password!)}>
+                    <IconCopy className="copy-icon" style={{ width: 25, height: 25 }}/>
                 </Button>
             </div>
         </div>
