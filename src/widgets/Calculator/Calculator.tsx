@@ -4,7 +4,7 @@ import RangeInput from "../../shared/ui/rangeInput"
 import "./Calculator.css"
 import CopyIcon from '../../shared/assets/copy-icon.png'
 import useCalcStore from "../../shared/store"
-import { generatePassword } from "./utils"
+import { copyText, generatePassword } from "./utils"
 
 const Calculator = () => {
 
@@ -31,7 +31,7 @@ const Calculator = () => {
         <div className="calculator-content-box">
             <div className="calculator-password-content">
                 <p>{ password ? password : <span className="password-placeholder">Password...</span>} </p>
-                <Button className="" onClick={() => console.log()}>
+                <Button className="" onClick={() => copyText(password!)}>
                     <img width={30} height={30} src={CopyIcon}/>
                 </Button>
             </div>
