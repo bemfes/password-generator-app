@@ -3,9 +3,10 @@ import CheckBox from "../../shared/ui/CheckBox"
 import RangeInput from "../../shared/ui/rangeInput"
 import "./Calculator.css"
 import useCalcStore from "../../shared/store"
-import { copyText, generatePassword } from "./utils"
+import {generatePassword } from "./utils"
 import IconCopy from '../../shared/assets/icon-copy.svg?react'
 import ShowStrength from "../../features/show-difficulty/showStrength"
+import { copyText } from "../../shared/utils"
 
 const Calculator = () => {
 
