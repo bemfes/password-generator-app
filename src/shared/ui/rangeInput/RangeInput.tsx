@@ -2,17 +2,17 @@ import { FC } from "react";
 import { RangeInputProps } from "./types";
 import "./RangeInput.css"
 
-const RangeInput: FC<RangeInputProps> = ({ labelText, id, className, min, max, value, onChange }) => {
+const RangeInput: FC<RangeInputProps> = ({ labelText, id, className, min, max, value, fullTrackColor, emptyTrackColor, onChange }) => {
     
   const percentage = ((Number(value) - Number(min)) / (Number(max)- Number(min))) * 100;
 
   const backgroundStyle = {
     background: `linear-gradient(
       to right,
-      #A4FFAF 0%, 
-      #A4FFAF ${percentage}%, 
-      #18171F ${percentage}%, 
-      #18171F 100%
+      ${fullTrackColor} 0%, 
+      ${fullTrackColor} ${percentage}%, 
+      ${emptyTrackColor} ${percentage}%, 
+      ${emptyTrackColor} 100%
     )`,
   };
 
