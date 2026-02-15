@@ -7,5 +7,7 @@ export interface RangeInputProps {
     min: string;
     max: string;
     value: string;
+    fullTrackColor: string;
+    emptyTrackColor: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
