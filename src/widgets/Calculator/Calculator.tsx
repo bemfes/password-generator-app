@@ -40,7 +40,7 @@ const Calculator = () => {
             </div>
         </div>
         <div className="calculator-content-box">
-            <RangeInput value={length} min='5' max="20" onChange={(e) => changeLength(e.target.value)} className="range-input-box" labelText="Character length" id='range'/>
+            <RangeInput fullTrackColor="#A4FFAF" emptyTrackColor="#18171F" value={length} min='5' max="20" onChange={(e) => changeLength(e.target.value)} className="range-input-box" labelText="Character length" id='range'/>
             <CheckBox checked={checkedUpperCase} onChange={changeUpperCase} labelText="Include Uppercase Letters" id="uppercase" className="checkbox-container"/>
             <CheckBox checked={checkedLowerCase} onChange={changeLowerCase} labelText="Include Lowercase Letters" id="lowercase" className="checkbox-container"/>
             <CheckBox checked={checkedNumbers} onChange={changeNumbers} labelText="Include Numbers" id="numbers" className="checkbox-container"/>
