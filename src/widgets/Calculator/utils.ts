@@ -1,10 +1,5 @@
 import useCalcStore from "../../shared/store";
 
-export function copyText(text: string): void {
-        if (text) {
-            navigator.clipboard.writeText(text)
-        }
-    }
 
 export function generatePassword(): void {
 
@@ -66,7 +61,7 @@ export function generatePassword(): void {
         password = symbol + password.slice(1)
     }
 
-    console.log(password);
+    
 
     useCalcStore.getState().setPassword(password)
 
