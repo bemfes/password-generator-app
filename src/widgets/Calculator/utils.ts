@@ -1,4 +1,4 @@
-import useCalcStore from "../../shared/store";
+import useCalcStore from "@/shared/store";
 
 
 export function generatePassword(): void {

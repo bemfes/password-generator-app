@@ -1,7 +1,7 @@
 import { FC } from "react"
 import "./showStrength.css"
 import { countStrength, strengthLevels } from "./utils"
-import useCalcStore from "../../shared/store"
+import useCalcStore from "@/shared/store"
 
 const ShowStrength: FC = () => {
 

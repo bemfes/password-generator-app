@@ -1,4 +1,4 @@
-import Calculator from "../../widgets/Calculator"
+import Calculator from "@/widgets/Calculator"
 
 const CalculatorPage = () => {
     return <Calculator/>
