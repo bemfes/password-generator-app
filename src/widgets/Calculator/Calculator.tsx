@@ -1,54 +1,113 @@
-import Button from "@/shared/ui/Button"
-import CheckBox from "@/shared/ui/CheckBox"
-import RangeInput from "@/shared/ui/rangeInput"
-import "./Calculator.css"
-import useCalcStore from "@/shared/store"
-import {generatePassword } from "./utils"
-import IconCopy from '@/shared/assets/icon-copy.svg?react'
-import ShowStrength from "@/features/show-difficulty/showStrength"
-import { copyText } from "@/shared/utils"
+import Button from "@/shared/ui/Button";
+import CheckBox from "@/shared/ui/CheckBox";
+import RangeInput from "@/shared/ui/rangeInput";
+import "./Calculator.css";
+import useCalcStore from "@/shared/store";
+import { generatePassword } from "./utils";
+import IconCopy from "@/shared/assets/icon-copy.svg?react";
+import ShowStrength from "@/features/show-difficulty/showStrength";
+import CopyTextButton from "@/features/copy-text/ui";
 
 const Calculator = () => {
+  const checkedUpperCase = useCalcStore((state) => state.checkedUpperCase);
+  const changeUpperCase = useCalcStore((state) => state.changeUpperCase);
 
-    const checkedUpperCase = useCalcStore(state => state.checkedUpperCase)
-    const changeUpperCase = useCalcStore(state => state.changeUpperCase)
+  const checkedLowerCase = useCalcStore((state) => state.checkedLowerCase);
+  const changeLowerCase = useCalcStore((state) => state.changeLowerCase);
 
-    const checkedLowerCase = useCalcStore(state => state.checkedLowerCase)
-    const changeLowerCase = useCalcStore(state => state.changeLowerCase)
+  const checkedNumbers = useCalcStore((state) => state.checkedNumbers);
+  const changeNumbers = useCalcStore((state) => state.changeNumbers);
 
-    const checkedNumbers = useCalcStore(state => state.checkedNumbers)
-    const changeNumbers = useCalcStore(state => state.changeNumbers)
+  const checkedSymbols = useCalcStore((state) => state.checkedSymbols);
+  const changeSymbols = useCalcStore((state) => state.changeSymbols);
 
-    const checkedSymbols = useCalcStore(state => state.checkedSymbols)
-    const changeSymbols = useCalcStore(state => state.changeSymbols)
+  const length = useCalcStore((state) => state.length);
+  const changeLength = useCalcStore((state) => state.changeLength);
 
-    const length = useCalcStore(state => state.length)
-    const changeLength = useCalcStore(state => state.changeLength)
+  const password = useCalcStore((state) => state.password);
 
-    const password = useCalcStore(state => state.password)
-    
-    const generateBtnAccess = [checkedUpperCase, checkedLowerCase, checkedNumbers, checkedSymbols]
+  const generateBtnAccess = [
+    checkedUpperCase,
+    checkedLowerCase,
+    checkedNumbers,
+    checkedSymbols,
+  ];
 
-    return <div className="calculator-box">
-        <h1>Password Generator</h1>
-        <div className="calculator-content-box">
-            <div className="calculator-password-content">
-                <p>{ password ? password : <span className="password-placeholder">Password...</span>} </p>
-                <Button className="copy-button" onClick={() => copyText(password!)}>
-                    <IconCopy className="copy-icon" style={{ width: 25, height: 25 }}/>
-                </Button>
-            </div>
+  return (
+    <div className="calculator-box">
+      <h1>Password Generator</h1>
+      <div className="calculator-content-box">
+        <div className="calculator-password-content">
+          <p>
+            {password ? (
+              password
+            ) : (
+              <span className="password-placeholder">Password...</span>
+            )}{" "}
+          </p>
+          <CopyTextButton
+            className="copy-button"
+            text={password!}
+            icon={
+              <IconCopy
+                className="copy-icon"
+                style={{ width: 25, height: 25 }}
+              />
+            }
+          />
         </div>
-        <div className="calculator-content-box">
-            <RangeInput fullTrackColor="#A4FFAF" emptyTrackColor="#18171F" value={length} min='5' max="20" onChange={(e) => changeLength(e.target.value)} className="range-input-box" labelText="Character length" id='range'/>
-            <CheckBox checked={checkedUpperCase} onChange={changeUpperCase} labelText="Include Uppercase Letters" id="uppercase" className="checkbox-container"/>
-            <CheckBox checked={checkedLowerCase} onChange={changeLowerCase} labelText="Include Lowercase Letters" id="lowercase" className="checkbox-container"/>
-            <CheckBox checked={checkedNumbers} onChange={changeNumbers} labelText="Include Numbers" id="numbers" className="checkbox-container"/>
-            <CheckBox checked={checkedSymbols} onChange={changeSymbols} labelText="Include Symbols" id="symbols" className="checkbox-container"/>
-            <ShowStrength/>
-            <Button disabled={generateBtnAccess.includes(true)? false : true} className="button green-button"  onClick={generatePassword}>GENERATE</Button>
-        </div>
+      </div>
+      <div className="calculator-content-box">
+        <RangeInput
+          fullTrackColor="#A4FFAF"
+          emptyTrackColor="#18171F"
+          value={length}
+          min="5"
+          max="20"
+          onChange={(e) => changeLength(e.target.value)}
+          className="range-input-box"
+          labelText="Character length"
+          id="range"
+        />
+        <CheckBox
+          checked={checkedUpperCase}
+          onChange={changeUpperCase}
+          labelText="Include Uppercase Letters"
+          id="uppercase"
+          className="checkbox-container"
+        />
+        <CheckBox
+          checked={checkedLowerCase}
+          onChange={changeLowerCase}
+          labelText="Include Lowercase Letters"
+          id="lowercase"
+          className="checkbox-container"
+        />
+        <CheckBox
+          checked={checkedNumbers}
+          onChange={changeNumbers}
+          labelText="Include Numbers"
+          id="numbers"
+          className="checkbox-container"
+        />
+        <CheckBox
+          checked={checkedSymbols}
+          onChange={changeSymbols}
+          labelText="Include Symbols"
+          id="symbols"
+          className="checkbox-container"
+        />
+        <ShowStrength />
+        <Button
+          disabled={generateBtnAccess.includes(true) ? false : true}
+          className="button green-button"
+          onClick={generatePassword}
+        >
+          GENERATE
+        </Button>
+      </div>
     </div>
-}
+  );
+};
 
-export default Calculator
+export default Calculator;
