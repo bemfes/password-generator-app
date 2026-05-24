@@ -5,7 +5,7 @@ import "./Calculator.css";
 import useCalcStore from "@/shared/store";
 import { generatePassword } from "./utils";
 import IconCopy from "@/shared/assets/icon-copy.svg?react";
-import ShowStrength from "@/features/show-difficulty/showStrength";
+import ShowStrength from "@/features/show-strength/showStrength";
 import CopyTextButton from "@/features/copy-text/ui";
 
 const Calculator = () => {
