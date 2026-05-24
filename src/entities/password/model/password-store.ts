@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { InitialStateTypes, UseCalcStoreTypes } from "./types";
+import { InitialStateTypes, UsePasswordStoreTypes } from "./types";
 
 const initialState: InitialStateTypes = {
   password: null,
@@ -10,7 +10,7 @@ const initialState: InitialStateTypes = {
   checkedSymbols: false,
 };
 
-const useCalcStore = create<UseCalcStoreTypes>((set) => ({
+const useCalcStore = create<UsePasswordStoreTypes>((set) => ({
   ...initialState,
   changeUpperCase: () =>
     set((state) => ({ ...state, checkedUpperCase: !state.checkedUpperCase })),

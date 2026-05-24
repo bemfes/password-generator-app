@@ -7,7 +7,7 @@ export interface InitialStateTypes {
   checkedSymbols: boolean;
 }
 
-export interface UseCalcStoreTypes extends InitialStateTypes {
+export interface UsePasswordStoreTypes extends InitialStateTypes {
   changeUpperCase: () => void;
   changeLowerCase: () => void;
   changeNumbers: () => void;
