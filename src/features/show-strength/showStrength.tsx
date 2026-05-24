@@ -1,18 +1,18 @@
 import { FC } from "react";
 import "./showStrength.css";
 import { countStrength, strengthLevels } from "./utils";
-import useCalcStore from "@/shared/store";
+import usePasswordStore from "@/entities/password/model";
 
 const ShowStrength: FC = () => {
-  const checkedUpperCase = useCalcStore((state) => state.checkedUpperCase);
+  const checkedUpperCase = usePasswordStore((state) => state.checkedUpperCase);
 
-  const checkedLowerCase = useCalcStore((state) => state.checkedLowerCase);
+  const checkedLowerCase = usePasswordStore((state) => state.checkedLowerCase);
 
-  const checkedNumbers = useCalcStore((state) => state.checkedNumbers);
+  const checkedNumbers = usePasswordStore((state) => state.checkedNumbers);
 
-  const checkedSymbols = useCalcStore((state) => state.checkedSymbols);
+  const checkedSymbols = usePasswordStore((state) => state.checkedSymbols);
 
-  const length = useCalcStore((state) => state.length);
+  const length = usePasswordStore((state) => state.length);
 
   const checkedProperties = [
     checkedUpperCase,

@@ -1,11 +1,11 @@
-import useCalcStore from "@/shared/store";
+import usePasswordStore from "@/entities/password/model";
 
 export function generatePassword(): void {
-  const checkedUpperCase = useCalcStore.getState().checkedUpperCase;
-  const checkedLowerCase = useCalcStore.getState().checkedLowerCase;
-  const checkedNumbers = useCalcStore.getState().checkedNumbers;
-  const checkedSymbols = useCalcStore.getState().checkedSymbols;
-  const length = Number(useCalcStore.getState().length);
+  const checkedUpperCase = usePasswordStore.getState().checkedUpperCase;
+  const checkedLowerCase = usePasswordStore.getState().checkedLowerCase;
+  const checkedNumbers = usePasswordStore.getState().checkedNumbers;
+  const checkedSymbols = usePasswordStore.getState().checkedSymbols;
+  const length = Number(usePasswordStore.getState().length);
 
   let password: string = "";
 
@@ -64,5 +64,5 @@ export function generatePassword(): void {
     password = symbol + password.slice(1);
   }
 
-  useCalcStore.getState().setPassword(password);
+  usePasswordStore.getState().setPassword(password);
 }

@@ -2,29 +2,29 @@ import Button from "@/shared/ui/Button";
 import CheckBox from "@/shared/ui/CheckBox";
 import RangeInput from "@/shared/ui/RangeInput";
 import "./PasswordGenerator.css";
-import useCalcStore from "@/shared/store";
+import usePasswordStore from "@/entities/password/model";
 import { generatePassword } from "./utils";
 import IconCopy from "@/shared/assets/icon-copy.svg?react";
 import ShowStrength from "@/features/show-strength/showStrength";
 import CopyTextButton from "@/features/copy-text/ui";
 
 const PasswordGenerator = () => {
-  const checkedUpperCase = useCalcStore((state) => state.checkedUpperCase);
-  const changeUpperCase = useCalcStore((state) => state.changeUpperCase);
+  const checkedUpperCase = usePasswordStore((state) => state.checkedUpperCase);
+  const changeUpperCase = usePasswordStore((state) => state.changeUpperCase);
 
-  const checkedLowerCase = useCalcStore((state) => state.checkedLowerCase);
-  const changeLowerCase = useCalcStore((state) => state.changeLowerCase);
+  const checkedLowerCase = usePasswordStore((state) => state.checkedLowerCase);
+  const changeLowerCase = usePasswordStore((state) => state.changeLowerCase);
 
-  const checkedNumbers = useCalcStore((state) => state.checkedNumbers);
-  const changeNumbers = useCalcStore((state) => state.changeNumbers);
+  const checkedNumbers = usePasswordStore((state) => state.checkedNumbers);
+  const changeNumbers = usePasswordStore((state) => state.changeNumbers);
 
-  const checkedSymbols = useCalcStore((state) => state.checkedSymbols);
-  const changeSymbols = useCalcStore((state) => state.changeSymbols);
+  const checkedSymbols = usePasswordStore((state) => state.checkedSymbols);
+  const changeSymbols = usePasswordStore((state) => state.changeSymbols);
 
-  const length = useCalcStore((state) => state.length);
-  const changeLength = useCalcStore((state) => state.changeLength);
+  const length = usePasswordStore((state) => state.length);
+  const changeLength = usePasswordStore((state) => state.changeLength);
 
-  const password = useCalcStore((state) => state.password);
+  const password = usePasswordStore((state) => state.password);
 
   const generateBtnAccess = [
     checkedUpperCase,
