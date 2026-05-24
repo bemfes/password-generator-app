@@ -1,14 +1,12 @@
-import CalculatorPage from '../pages/CalculatorPage'
-import './index.css'
+import PasswordGeneratorPage from "../pages/PasswordGeneratorPage";
+import "./index.css";
 
 function App() {
-  
-
   return (
     <>
-      <CalculatorPage/>
+      <PasswordGeneratorPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
