@@ -10,7 +10,7 @@ const initialState: InitialStateTypes = {
   checkedSymbols: false,
 };
 
-const useCalcStore = create<UsePasswordStoreTypes>((set) => ({
+const usePasswordStore = create<UsePasswordStoreTypes>((set) => ({
   ...initialState,
   changeUpperCase: () =>
     set((state) => ({ ...state, checkedUpperCase: !state.checkedUpperCase })),
@@ -24,4 +24,4 @@ const useCalcStore = create<UsePasswordStoreTypes>((set) => ({
   setPassword: (value) => set((state) => ({ ...state, password: value })),
 }));
 
-export default useCalcStore;
+export default usePasswordStore;
