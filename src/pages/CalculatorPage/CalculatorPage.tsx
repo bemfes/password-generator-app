@@ -1,7 +1,7 @@
-import Calculator from "@/widgets/Calculator"
+import PasswordGenerator from "@/widgets/PasswordGenerator";
 
 const CalculatorPage = () => {
-    return <Calculator/>
-}
+  return <PasswordGenerator />;
+};
 
-export default CalculatorPage
+export default CalculatorPage;
