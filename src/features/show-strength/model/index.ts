@@ -1,0 +1,1 @@
+export { useShowStrength } from "./useShowStrength";
