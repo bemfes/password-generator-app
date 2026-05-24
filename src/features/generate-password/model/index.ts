@@ -1,0 +1,1 @@
+export { useGeneratePassword } from "./useGeneratePassword";
