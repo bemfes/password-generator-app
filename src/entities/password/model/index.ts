@@ -1,1 +1,1 @@
-export { default } from "./calc-store";
+export { default } from "./password-store";
