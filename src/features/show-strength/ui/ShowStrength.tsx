@@ -1,6 +1,6 @@
 import { FC } from "react";
-import "./showStrength.css";
-import { countStrength, strengthLevels } from "./utils";
+import "./ShowStrength.css";
+import { countStrength, strengthLevels } from "../utils";
 import usePasswordStore from "@/entities/password/model";
 
 const ShowStrength: FC = () => {
