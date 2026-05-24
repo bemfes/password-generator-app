@@ -1,1 +1,1 @@
-export { default } from "./showStrength";
+export { default } from "./ShowStrength";

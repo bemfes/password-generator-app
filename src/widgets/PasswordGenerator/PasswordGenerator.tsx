@@ -1,7 +1,7 @@
 import "./PasswordGenerator.css";
 import usePasswordStore from "@/entities/password/model";
 import IconCopy from "@/shared/assets/icon-copy.svg?react";
-import ShowStrength from "@/features/show-strength/ui/showStrength";
+import ShowStrength from "@/features/show-strength/ui/ShowStrength";
 import CopyTextButton from "@/features/copy-text/ui";
 import PasswordSettings from "@/features/password-settings/ui";
 import GeneratePasswordButton from "@/features/generate-password/ui";
