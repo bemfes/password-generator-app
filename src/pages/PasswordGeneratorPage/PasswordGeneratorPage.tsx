@@ -1,7 +1,7 @@
 import PasswordGenerator from "@/widgets/PasswordGenerator";
 
-const CalculatorPage = () => {
+const PasswordGeneratorPage = () => {
   return <PasswordGenerator />;
 };
 
-export default CalculatorPage;
+export default PasswordGeneratorPage;
