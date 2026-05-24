@@ -1,0 +1,1 @@
+export { countStrength } from "./countStrength";
