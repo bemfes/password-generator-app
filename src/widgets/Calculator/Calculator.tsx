@@ -1,6 +1,6 @@
 import Button from "@/shared/ui/Button";
 import CheckBox from "@/shared/ui/CheckBox";
-import RangeInput from "@/shared/ui/rangeInput";
+import RangeInput from "@/shared/ui/RangeInput";
 import "./Calculator.css";
 import useCalcStore from "@/shared/store";
 import { generatePassword } from "./utils";
