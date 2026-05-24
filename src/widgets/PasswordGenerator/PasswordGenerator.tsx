@@ -1,14 +1,14 @@
 import Button from "@/shared/ui/Button";
 import CheckBox from "@/shared/ui/CheckBox";
 import RangeInput from "@/shared/ui/RangeInput";
-import "./Calculator.css";
+import "./PasswordGenerator.css";
 import useCalcStore from "@/shared/store";
 import { generatePassword } from "./utils";
 import IconCopy from "@/shared/assets/icon-copy.svg?react";
 import ShowStrength from "@/features/show-strength/showStrength";
 import CopyTextButton from "@/features/copy-text/ui";
 
-const Calculator = () => {
+const PasswordGenerator = () => {
   const checkedUpperCase = useCalcStore((state) => state.checkedUpperCase);
   const changeUpperCase = useCalcStore((state) => state.changeUpperCase);
 
@@ -110,4 +110,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
+export default PasswordGenerator;
