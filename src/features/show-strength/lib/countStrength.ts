@@ -15,11 +15,11 @@ export function countStrength(
   if (
     ((checkedPropertiesLength === 3 || checkedPropertiesLength === 2) &&
       Number(length) >= 10) ||
-    (checkedProperties.every(Boolean) && Number(length) < 10)
+    (checkedPropertiesLength === 4 && Number(length) < 10)
   ) {
     return 3;
   }
-  if (checkedProperties.every(Boolean) && Number(length) >= 10) {
+  if (checkedPropertiesLength === 4 && Number(length) >= 10) {
     return 4;
   }
   return 0;
