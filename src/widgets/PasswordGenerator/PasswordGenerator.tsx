@@ -23,7 +23,7 @@ const PasswordGenerator = () => {
           </p>
           <CopyTextButton
             className="copy-button"
-            text={password!}
+            text={password}
             icon={
               <IconCopy
                 className="copy-icon"
