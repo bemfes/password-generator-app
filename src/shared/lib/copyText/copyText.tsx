@@ -1,5 +1,5 @@
-export function copyText(text: string | null): void {
+export async function copyText(text: string | null): Promise<void> {
   if (text) {
-    navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(text);
   }
 }
