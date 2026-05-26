@@ -2,19 +2,18 @@ export function countStrength(
   checkedProperties: boolean[],
   length: string,
 ): number {
-  if (checkedProperties.filter(Boolean).length === 1) {
+  const checkedPropertiesLength = checkedProperties.filter(Boolean).length;
+  if (checkedPropertiesLength === 1) {
     return 1;
   }
   if (
-    (checkedProperties.filter(Boolean).length === 2 ||
-      checkedProperties.filter(Boolean).length === 3) &&
+    (checkedPropertiesLength === 2 || checkedPropertiesLength === 3) &&
     Number(length) < 10
   ) {
     return 2;
   }
   if (
-    ((checkedProperties.filter(Boolean).length === 3 ||
-      checkedProperties.filter(Boolean).length === 2) &&
+    ((checkedPropertiesLength === 3 || checkedPropertiesLength === 2) &&
       Number(length) >= 10) ||
     (checkedProperties.every(Boolean) && Number(length) < 10)
   ) {
