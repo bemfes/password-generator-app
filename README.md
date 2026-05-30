@@ -4,6 +4,8 @@ This is a password generator with varying levels of complexity. You can generate
 
 The project was made using React, TypeScript, Zustand, Tailwind CSS, Vite and FSD. [See the demo here](https://bemfes.github.io/password-generator-app/)
 
+The project also contains unit tests and integration tests written in Vitest and React Testing Library.
+
 The project uses commit linting with Сommitlint and Husky. Also, for each commit, linting and code formatting of committed files is performed using lint-staged.
 
 
