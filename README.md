@@ -13,6 +13,12 @@
 
 🌐 [Демо проекта](https://bemfes.github.io/password-generator-app/)
 
+## 📸 Превью
+
+<div>
+  <img src="./preview/password-generator-preview.gif" width="450" alt="Видео-демонстрация приложения" />
+</div>
+
 
 ## 🛠️ Стек
 
